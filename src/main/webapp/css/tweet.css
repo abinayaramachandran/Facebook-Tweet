@@ -2,7 +2,7 @@ body {margin:0;}
 
 .topnav {
   overflow: hidden;
-  background-color: #3b5998;
+  background-color: #d44a83;
   font-family: "Lucida Grande"
 }
 
@@ -17,17 +17,17 @@ body {margin:0;}
 }
 
 .topnav a:hover {
-  background-color: #4CAF50;
+  background-color: #adbd53;
   color: black;
 }
 
 .topnav a.active {
-    background-color: #4CAF50;
+    background-color: #adbd53;
     color: white;
 }
 
 .button {
-    background-color: #3b5998;
+    background-color: #d44a83;
     border: none;
     color: white;
     height: 40px;
@@ -58,7 +58,7 @@ body {margin:0;}
 
 /* Modal Content/Box */
 .popup-content {
-    background-color: #fefefe;
+    background-color:#ebf2fa;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
