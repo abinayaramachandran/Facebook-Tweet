@@ -126,7 +126,7 @@ function extractInfo(){
 		 console.log('user id n username , pic ' , user_name)
 		 console.log('user id n username , pic ' , pic)
 //		 document.cookie = "user_id=" + response.id;
-		 picture = "<img src='" + pic + "'>";
+		 picture = "<img src=" + pic + ">";
 		  document.cookie="picture="+picture;
 		localStorage.setItem('picture',picture);
 		 });

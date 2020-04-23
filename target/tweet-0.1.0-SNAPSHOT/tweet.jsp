@@ -7,12 +7,23 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/css/tweet.css">
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164320664-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-164320664-1');
+</script>
+
 </head>
 <body>
  <script type="text/javascript" src="/js/tweet.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 <div class="topnav">
-  <a href="#tweet">Tweet</a>
+  <a href="#tweet" style="background-color: green">Tweet</a>
   <a href="friendstweet.jsp">Friends</a>
   <a  id=toptweet href=toptweet.jsp>Top Tweet</a>
   <div id="fb-root"></div>
@@ -60,6 +71,7 @@ console.log(document.getElementById("first_name")+" "+document.getElementById("l
 <div id="mypopup" class="popup">
 <div  class="popup-content">
 <span class="close">&times;</span>
+<p> Choose whether to share it in feed or send it as message </p>
 <input type="button"  class="button" value="Share Tweet" name="share_tweet" onclick=shareTweet() />
 <input type="button"  class="button" value="Send Direct Message" name="send_direct_msg" onclick=sendDirectMsg() />
 </div>

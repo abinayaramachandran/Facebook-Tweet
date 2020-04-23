@@ -60,7 +60,7 @@ for (Entity result : pq.asIterable()) {
 	  ds.put(s);
 	  out.println("<h1>Status of "+ s.getProperty("first_name")+" "+s.getProperty("last_name")+"</h1>");
 	  out.println("<table frame=box>");
-	  out.println("<tr><td><div style="+"height: 50px; width:50px>"+picture+"</div><td>");
+	 // out.println("<tr><td><div style="+"height: 50px; width:50px>"+picture+"</div><td>");
 	  out.println("<td><div id=name>"+ first_name+" "+lastName +"</div></td>");
 	  out.println("<tr><h3><div id=status> "+s.getProperty("first_name")+" said "+status +"</div></h3></tr>");
 	  out.println("<tr><div id=postedate>Posted at:"+ time +"</div></tr>");
