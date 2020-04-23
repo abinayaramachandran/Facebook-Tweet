@@ -16,6 +16,17 @@
 <head>
 <link rel="stylesheet" href="/css/tweet.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164320664-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-164320664-1');
+</script>
+
 <title>Insert title here</title>
 </head>
 <body>
