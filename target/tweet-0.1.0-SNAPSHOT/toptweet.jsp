@@ -54,7 +54,7 @@
 %>
 			  
 			  <table frame=box>
-			  <tr><td><div style="height: 50px; width:50px; position: relative"> <%= picture %></div><td>
+			  <tr><td><div style="height: 150px; width:150px; position: relative"> <%= picture %></div><td>
 			  <td>User: <%= first_name+" "+lastName %> </td></tr>
 			  <tr><td><br><br><br><br><br>Status: <%= status %></td></tr>
 			  <tr><td>Posted at: <%=time %></td></tr>
