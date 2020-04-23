@@ -1,7 +1,7 @@
 package com.app.fb;
 
 import java.io.IOException;
-
+import java.net.URLEncoder;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -30,10 +30,11 @@ public class GaeStoreServlet extends HttpServlet {
 		Cookie user_id = new Cookie("user_id", req.getParameter("user_id"));
 		Cookie f_name= new Cookie("first_name",req.getParameter("first_name"));
 		Cookie l_name=new Cookie("last_name", req.getParameter("last_name"));
-		Cookie pic = new Cookie("picture", req.getParameter("picture"));
+		Cookie pic = new Cookie("picture", URLEncoder.encode(req.getParameter("picture"), "UTF-8"));
 		resp.addCookie(user_id);
 		resp.addCookie(f_name);
 		resp.addCookie(l_name);
+		
 		resp.addCookie(pic);
 		Date date = new Date();
         System.out.println(sdf.format(date));

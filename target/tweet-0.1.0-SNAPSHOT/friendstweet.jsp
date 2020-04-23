@@ -49,7 +49,7 @@
 			  Long visited_count = (Long)((result.getProperty("visited_count"))); %>
 			  <table >
 			  <tbody>
-			  <tr><div style="height: 50px; width: 50px position: relative"><%=picture %></div></tr>
+			  <tr><div style="height: 150px; width: 150px;position: relative"><%=picture %></div></tr>
 			  <tr><br><br><br>User: <%= first_name %> <%= lastName %> </tr>
 			  <br><tr>Status: <%= status %> </tr>
 			  <br><tr>Posted Date: <%= time %> </tr>

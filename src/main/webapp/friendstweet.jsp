@@ -32,7 +32,7 @@
 <body>
 <div class="topnav">
   <a href="tweet.jsp">Tweet</a>
-  <a href="friendstweet.jsp">Friends</a>
+  <a href="friendstweet.jsp" style="background-color: green">Friends</a>
   <a  id=toptweet href="toptweet.jsp">Top Tweet</a>
   <div id="fb-root"></div>
   <div align="right">
@@ -58,15 +58,22 @@
 			  Long id = (Long) result.getKey().getId();
 			  String time = (String) result.getProperty("timestamp");
 			  Long visited_count = (Long)((result.getProperty("visited_count"))); %>
-			  <table >
-			  <tbody>
-			  <tr><div style="height: 50px; width: 50px position: relative"><%=picture %></div></tr>
-			  <tr><br><br><br>User: <%= first_name %> <%= lastName %> </tr>
-			  <br><tr>Status: <%= status %> </tr>
-			  <br><tr>Posted Date: <%= time %> </tr>
-			 <br> <tr>Visited#: <%= visited_count %></tr><br><br>
-			 </tbody>
+			
+			  
+			   <table frame=box style="width: 100%;">
+			  <tr><td><div style="height: 150px; width:150px; position: relative"> <%= picture %></div><td></tr>
+			  <td><input type="button" value="User : " class="user_button"></input> <%= first_name+" "+lastName %> </td></tr>
+			  <tr>
+			  	<td><input type="button" value="Tweet : " class="user_button"></button> <%= status %></td>
+			  </tr>
+			  <tr>
+			  	<td><input type="button" value="Posted at : " class="user_button"></input> <%=time %></td>
+			  </tr>
+			  <tr>
+			  	<td><input type="button" value="#Visited : " class="user_button"></button> <%= visited_count %></td>
+			  	</tr>
 			  </table>
+			  
 			  <% Entity s=ds.get(KeyFactory.createKey("tweet", id));
 			  s.setProperty("visited_count", visited_count+1);
 			  ds.put(s);

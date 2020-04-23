@@ -101,17 +101,36 @@ function extractInfo(){
 				localStorage.setItem('last_name',last_name);
 				console.log(document.cookie);
 			});
-	 FB.api(
-			  '/me/picture',
-			  'GET',
-			  {"height":"100"},
-			  function(response) {
-			      // Insert your code here
-				  picture = "<img src='" + response.data.url + "'>";
-				  document.cookie="picture="+picture;
-				localStorage.setItem('picture',picture);
-			  }
-			);
+//	 FB.api(
+//			  '/me/picture',
+//			  'GET',
+//			  {},
+//			  function(response) {
+//			      // Insert your code here
+//				  console.log('in extract info -- ' , JSON.stringify(response))
+//				  picture = "<img src='" + response.data.url + "'>";
+//				  document.cookie="picture="+picture;
+//				localStorage.setItem('picture',picture);
+//			  }
+//			);
+	
+	 FB.api('/me', function(response) {
+		 console.log('Successful login for: ' + response.id);
+		 console.log('response is ' + JSON.stringify(response));
+//		 document.getElementById('picture_show').innerHTML = '<a href="#" class="pull-left"><img class="media-object" src="http://graph.facebook.com/' + response.id + '/picture?type=large" /></a>';
+//		 document.getElementById('profile_name').innerText = response.name;
+		 pic  = 'http://graph.facebook.com/' + response.id + '/picture';
+		 user_id  =  response.id;
+		 user_name = response.name.split(" ")[0];
+		 console.log('user id n username , pic ' , user_id)
+		 console.log('user id n username , pic ' , user_name)
+		 console.log('user id n username , pic ' , pic)
+//		 document.cookie = "user_id=" + response.id;
+		 picture = "<img src='" + pic + "'>";
+		  document.cookie="picture="+picture;
+		localStorage.setItem('picture',picture);
+		 });
+	
 	 document.getElementById("user_ids").value    = getCookie('user_id');
 	document.getElementById("user_id").value    = getCookie('user_id');
 	document.getElementById("first_name").value = getCookie('first_name');
